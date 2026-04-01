@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHER | Peptide Serum Elite</title>
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --bg: #000000;
+            --glass: rgba(255, 255, 255, 0.04);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background: var(--bg);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* ৫টি এনিমেটেড গোল্ডেন লাইন (Sidebar) */
+        .sidebar-lines {
+            position: absolute;
+            left: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .line {
+            width: 2px;
+            height: 45px;
+            background: var(--border);
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .line::after {
+            content: '';
+            position: absolute;
+            top: -100%; left: 0; width: 100%; height: 100%;
+            background: var(--gold);
+            animation: flow 4s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes flow {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+
+        /* লাক্সারি কার্ড ডিজাইন */
+        .luxury-card {
+            width: 360px;
+            background: var(--glass);
+            backdrop-filter: blur(50px);
+            border: 1px solid var(--border);
+            border-radius: 40px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 40px 120px rgba(0,0,0,0.8);
+            transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .luxury-card:hover { 
+            border-color: var(--gold); 
+            transform: translateY(-10px);
+            box-shadow: 0 50px 100px rgba(212, 175, 55, 0.1);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 280px;
+            object-fit: contain;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 15px 30px rgba(255,255,255,0.05));
+            transition: 0.5s;
+        }
+
+        .luxury-card:hover .product-img { transform: scale(1.05); }
+
+        .price-focus-box {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px dashed var(--gold);
+            border-radius: 25px;
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        .bdt-text {
+            display: block;
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--gold);
+            text-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+            letter-spacing: -1px;
+        }
+
+        .usd-small { font-size: 14px; opacity: 0.5; letter-spacing: 2px; }
+
+        /* Acquire Button - anchor tag style */
+        .acquire-btn {
+            display: block;
+            text-decoration: none;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            background: #fff;
+            color: #000;
+            border: none;
+            border-radius: 20px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: 0.4s;
+            font-size: 14px;
+        }
+
+        .acquire-btn:hover { 
+            background: var(--gold); 
+            letter-spacing: 6px;
+            transform: scale(1.02);
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="sidebar-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="luxury-card">
+        <span style="font-size: 9px; letter-spacing: 6px; color: var(--gold); opacity: 0.8; display: block; margin-bottom: 15px;">AETHER SKINCARE</span>
+        
+        <img src="https://raw.githubusercontent.com/jamil478/My-sobi-/refs/heads/main/fff3b714-1c20-43de-a385-7bec197b806d_fff3b714-1c20-43de-a385-7bec197b806d_tmpppmcahmw_0_0.webp" class="product-img" alt="Peptide Serum">
+        
+        <h2 style="margin: 0; font-size: 26px; font-weight: 300; letter-spacing: 1px;">Peptide Serum</h2>
+        
+        <div class="price-focus-box">
+            <span style="font-size: 10px; opacity: 0.6; display: block; margin-bottom: 8px;">PREMIUM ACQUISITION PRICE</span>
+            <span class="bdt-text">৳901</span>
+            <span class="usd-small">EQUIVALENT TO $7.1 USD</span>
+        </div>
+
+        <a href="https://wa.me/8801616700055text=Hello! I would like to order the Peptide Serum." target="_blank" class="acquire-btn">SECURE ORDER</a>
+    </div>
+
+</body>
+</html>
